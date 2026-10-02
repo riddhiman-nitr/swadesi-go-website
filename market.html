@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwadesiGo | Market Intelligence</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">🚲 SwadesiGo</a>
+    <ul class="nav-links">
+        <li><a href="market.html">Market Intelligence</a></li>
+        <li><a href="gtm.html">Go-to-Market</a></li>
+        <li><a href="simulator.html">R2W Simulator</a></li>
+        <li><a href="financials.html">Financials</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <section class="section">
+        <h2 class="section-title">Market Intelligence & Opportunity Sizing</h2>
+        <p class="section-subtitle">India's EV two-wheeler market is experiencing explosive growth driven by government incentives, rising fuel costs, and changing consumer preferences. SwadesiGo targets underserved Tier-2/3 markets with practical, durable solutions.</p>
+
+        <div class="market-grid">
+            <div class="market-card">
+                <h3>India EV Two-Wheeler Market (2024)</h3>
+                <div class="number">₹15,000 Cr</div>
+                <p>Market size growing at 45% CAGR. Industry shipped 6.8M units in FY2024, representing 18% of total two-wheeler sales.</p>
+            </div>
+            <div class="market-card">
+                <h3>PLI Scheme Impact</h3>
+                <div class="number">₹10,000 Cr</div>
+                <p>Government incentives via PLI Scheme driving manufacturing capacity and reducing consumer prices by 15-20%.</p>
+            </div>
+            <div class="market-card">
+                <h3>Gig Economy Workforce</h3>
+                <div class="number">12M+</div>
+                <p>Delivery partners, ride-hailing drivers, and SME owners represent high-value customer segment with operational cost pressures.</p>
+            </div>
+            <div class="market-card">
+                <h3>Tier-2/3 Penetration</h3>
+                <div class="number">28%</div>
+                <p>EV adoption in Tier-2/3 cities is 10-15 points below Tier-1, representing greenfield expansion opportunity.</p>
+            </div>
+            <div class="market-card">
+                <h3>Cost Savings for Users</h3>
+                <div class="number">70%</div>
+                <p>EV scooters reduce per-km operating cost vs. petrol two-wheelers. Payback period: 18-24 months for gig workers.</p>
+            </div>
+            <div class="market-card">
+                <h3>5-Year Revenue TAM</h3>
+                <div class="number">₹48,000 Cr</div>
+                <p>Projected market size by 2028, with Tier-2/3 representing 35% of total addressable opportunity.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <div class="chart-title">EV Two-Wheeler Market Growth (FY2020-FY2028E)</div>
+                <canvas id="marketGrowthChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <div class="chart-title">Market Share by Segment (FY2024)</div>
+                <canvas id="segmentChart"></canvas>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <div class="chart-title">EV Adoption % by City Tier</div>
+                <canvas id="adoptionChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <div class="chart-title">Target Segment Addressable Market</div>
+                <canvas id="tamChart"></canvas>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 SwadesiGo. Engineered for Indian Roads. Crafted for Real Impact.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

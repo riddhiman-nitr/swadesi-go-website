@@ -3,627 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwadesiGo - Demand Before Dealership</title>
+    <title>SwadesiGo Growth OS - Series A Strategy & Market Intelligence</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="#" class="logo" onclick="showSection('hero'); return false;">SwadesiGo</a>
-        <ul class="nav-links">
-            <li><a onclick="showSection('hero')">Home</a></li>
-            <li><a onclick="showSection('section-1')">Circle</a></li>
-            <li><a onclick="showSection('section-2')">Growth OS</a></li>
-            <li><a onclick="showSection('section-3')">RealRange™</a></li>
-            <li><a onclick="showSection('section-4')">Analytics</a></li>
-        </ul>
-    </nav>
 
-    <!-- SECTION 0: HERO / LANDING PAGE -->
-    <section id="hero" class="hero active">
-        <div class="section-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="tagline">Demand Before Dealership</div>
-                    <h1>Smart Mobility for India</h1>
-                    <p>SwadesiGo is revolutionizing two-wheeler mobility by building community-driven, capital-efficient growth in Tier-2 and Tier-3 cities. We don't chase dealerships—we build demand first.</p>
-                    
-                    <div class="hero-stats">
-                        <div class="stat-box">
-                            <div class="number">100</div>
-                            <div class="label">Champions Per City</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="number">63</div>
-                            <div class="label">Jaipur Onboarded</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="number">427</div>
-                            <div class="label">Test Rides Generated</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="number">31</div>
-                            <div class="label">Conversions</div>
-                        </div>
-                    </div>
+<nav class="navbar">
+    <a href="index.html" class="logo">🚲 SwadesiGo</a>
+    <ul class="nav-links">
+        <li><a href="market.html">Market Intelligence</a></li>
+        <li><a href="gtm.html">Go-to-Market</a></li>
+        <li><a href="simulator.html">R2W Simulator</a></li>
+        <li><a href="financials.html">Financials</a></li>
+    </ul>
+</nav>
 
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" onclick="showSection('section-1')">🎯 Explore Circle</button>
-                        <button class="btn btn-secondary" onclick="showSection('section-2')">📊 View Growth OS</button>
-                        <button class="btn btn-secondary" onclick="showSection('section-3')">🔋 RealRange™</button>
-                        <button class="btn btn-secondary" onclick="showSection('section-4')">📈 Analytics</button>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-visual-content">🔋</div>
-                    <h3>India's EV Momentum</h3>
-                    <p>The Indian EV two-wheeler market is projected to reach 10M units by 2030. SwadesiGo is built to capture this wave with a capital-efficient, community-first model.</p>
-                    <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                        <strong>Market Context:</strong> Tier-2/3 cities represent 65% of India's two-wheeler market with minimal EV penetration.
-                    </div>
-                </div>
+<div class="container">
+    <div class="hero">
+        <h1>SwadesiGo Growth OS</h1>
+        <p>Series A Expansion Strategy — Smart, Sustainable, Self-Reliant Mobility for Tier-2/3 India</p>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-number">₹15,000 Cr</div>
+                <div class="stat-label">EV Two-Wheeler Market (2024)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">45%</div>
+                <div class="stat-label">YoY Market Growth</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12M+</div>
+                <div class="stat-label">Gig Workers in India</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3.2M</div>
+                <div class="stat-label">Target Opportunity (2-Yr TAM)</div>
             </div>
         </div>
+    </div>
+
+    <div class="features-grid">
+        <a class="feature-card" href="market.html">
+            <h3>📊 Market Intelligence</h3>
+            <p>₹15K Cr market opportunity with 45% CAGR. Deep dive into segments, adoption trends, and competitive landscape.</p>
+            <button class="feature-btn">Explore Market →</button>
+        </a>
+        <a class="feature-card" href="gtm.html">
+            <h3>🎯 Go-to-Market Strategy</h3>
+            <p>100 Champions model across 3 waves. Capital-efficient distribution powered by community trust and local insights.</p>
+            <button class="feature-btn">View GTM Strategy →</button>
+        </a>
+        <a class="feature-card" href="simulator.html">
+            <h3>🔍 R2W City Simulator</h3>
+            <p>Interactive city ranking based on market potential, customer fit, and competitive whitespace. Adjust weights in real-time.</p>
+            <button class="feature-btn">Launch Simulator →</button>
+        </a>
+        <a class="feature-card" href="financials.html">
+            <h3>💰 Financial Projections</h3>
+            <p>Revenue ramp from ₹50 Cr (Y1) to ₹500+ Cr (Y3). Unit economics with improving margins and capital efficiency.</p>
+            <button class="feature-btn">View Financials →</button>
+        </a>
+    </div>
+
+    <section class="section" style="text-align: center; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;">
+        <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Ready to Scale Smart Mobility in Tier-2/3 India?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">SwadesiGo is raising Series A to expand our community-driven distribution model across 14 cities in the next 24 months.</p>
+        <button style="background: white; color: #10b981; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s;">📧 Get In Touch</button>
     </section>
+</div>
 
-    <!-- SECTION 1: SWADESI GO CIRCLE (Website 1) -->
-    <section id="section-1" class="section-1">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>🎯 SwadesiGo Circle</h2>
-                <p>The "100 Champions" Playbook: Building demand through hyper-local community networks before investing in dealerships.</p>
-            </div>
+<footer>
+    <p>&copy; 2025 SwadesiGo. Engineered for Indian Roads. Crafted for Real Impact.</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">Data sources: Industry reports, Government of India Ministry of Heavy Industries, SIAM, Statista, news reports (2024)</p>
+</footer>
 
-            <div class="circle-grid">
-                <div class="circle-card">
-                    <div class="icon">👥</div>
-                    <h3>100 Local Champions</h3>
-                    <p>Delivery riders, students, and SME owners become our decentralized sales force. They test, recommend, and drive organic growth.</p>
-                </div>
-                <div class="circle-card">
-                    <div class="icon">🚗</div>
-                    <h3>Organic Test Rides</h3>
-                    <p>Real-world validation from local communities. Champions generate authentic use cases that build trust faster than traditional advertising.</p>
-                </div>
-                <div class="circle-card">
-                    <div class="icon">📊</div>
-                    <h3>Data-Driven Expansion</h3>
-                    <p>Every city's performance is measured against a clear gate: 100 Champions, 800 test rides, 80 conversions in 100 days.</p>
-                </div>
-            </div>
-
-            <!-- INTERACTIVE CHAMPIONS SIMULATOR -->
-            <div class="champions-simulator">
-                <h3 style="color: var(--primary-dark); margin-bottom: 2rem;">📱 Interactive Champions Simulator</h3>
-                
-                <div class="simulator-grid">
-                    <div class="simulator-controls">
-                        <h4>Adjust City Metrics</h4>
-                        
-                        <div class="slider-group">
-                            <label>Champions Onboarded <span id="champVal">100</span>/100</label>
-                            <input type="range" id="champSlider" min="0" max="100" value="100" oninput="updateChampions()">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="champProgress" style="width: 100%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="slider-group">
-                            <label>Test Rides Generated <span id="ridesVal">800</span>/1000</label>
-                            <input type="range" id="ridesSlider" min="0" max="1000" value="800" oninput="updateChampions()">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="ridesProgress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="slider-group">
-                            <label>Conversions Achieved <span id="convVal">80</span>/150</label>
-                            <input type="range" id="convSlider" min="0" max="150" value="80" oninput="updateChampions()">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="convProgress" style="width: 53.33%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="slider-group">
-                            <label>Referral Rate <span id="refVal">20</span>%</label>
-                            <input type="range" id="refSlider" min="0" max="100" value="20" oninput="updateChampions()">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="refProgress" style="width: 20%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="slider-group">
-                            <label>CAC Target (Rs) <span id="cacVal">9000</span></label>
-                            <input type="range" id="cacSlider" min="5000" max="15000" step="500" value="9000" oninput="updateChampions()">
-                        </div>
-
-                        <div class="slider-group">
-                            <label>Spend Budget (Rs Lakh) <span id="spendVal">6</span></label>
-                            <input type="range" id="spendSlider" min="1" max="15" step="0.5" value="6" oninput="updateChampions()">
-                        </div>
-                    </div>
-
-                    <div class="simulator-results">
-                        <div class="results-container" id="champResults">
-                            <div class="result-metric">
-                                <div class="metric-label">Conversion Rate</div>
-                                <div class="metric-value" id="convRate">10%</div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-label">Actual CAC</div>
-                                <div class="metric-value" id="actualCAC">Rs 7,500</div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-label">Est. Referrals</div>
-                                <div class="metric-value" id="estRef">160</div>
-                            </div>
-                            <div class="result-metric status-good" id="statusBox">
-                                <div class="metric-label">100-Day Gate</div>
-                                <div class="metric-value">✓ SCALE</div>
-                            </div>
-                        </div>
-
-                        <div class="decision-box" id="decisionBox">
-                            <h4 id="decisionTitle">✓ SCALE</h4>
-                            <p id="decisionMsg">All gates met! Ready to unlock pop-up hub and franchise talks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- METRICS SECTION -->
-            <div class="metrics-section">
-                <div class="demo-label">Jaipur Champions - Simulation Data</div>
-                <h3>🟡 VALIDATE (Current Status)</h3>
-                
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="value">100</div>
-                        <div class="label">Champions Required</div>
-                    </div>
-                    <div class="metric">
-                        <div class="value">63</div>
-                        <div class="label">Onboarded (63%)</div>
-                    </div>
-                    <div class="metric">
-                        <div class="value">427</div>
-                        <div class="label">Test Rides</div>
-                    </div>
-                    <div class="metric">
-                        <div class="value">86</div>
-                        <div class="label">Referrals</div>
-                    </div>
-                    <div class="metric">
-                        <div class="value">31</div>
-                        <div class="label">Conversions</div>
-                    </div>
-                    <div class="metric">
-                        <div class="value">7.2%</div>
-                        <div class="label">Conversion Rate</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FUNNEL SECTION -->
-            <div class="funnel-section">
-                <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Launch Progression: Demand Before Dealership</h3>
-                <div class="funnel">
-                    <div class="funnel-stage">
-                        <div class="funnel-bar" style="width: 100%;">
-                            <span>100 Champions Onboarded</span>
-                        </div>
-                    </div>
-                    <div class="funnel-arrow-center">↓</div>
-                    <div class="funnel-stage">
-                        <div class="funnel-bar stage-2">
-                            <span>1,000 Test Rides Generated</span>
-                        </div>
-                    </div>
-                    <div class="funnel-arrow-center">↓</div>
-                    <div class="funnel-stage">
-                        <div class="funnel-bar stage-3">
-                            <span>500 Qualified Leads</span>
-                        </div>
-                    </div>
-                    <div class="funnel-arrow-center">↓</div>
-                    <div class="funnel-stage">
-                        <div class="funnel-bar stage-4">
-                            <span>150+ Customers</span>
-                        </div>
-                    </div>
-                    <div class="funnel-arrow-center">↓</div>
-                    <div class="funnel-stage">
-                        <div class="funnel-bar stage-5">
-                            <span>🎯 UNLOCK: Dealership Ready</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BENEFITS SECTION -->
-            <div class="circle-benefits">
-                <h3 style="color: var(--primary-dark); margin-top: 4rem; margin-bottom: 2rem;">Why the 100 Champions Model Works</h3>
-                <div class="benefits-grid">
-                    <div class="benefit-box">
-                        <div class="benefit-icon">💰</div>
-                        <h4>Capital Efficient</h4>
-                        <p>Reduce CAC by 60% vs. traditional dealership model. Build demand organically through community advocacy.</p>
-                    </div>
-                    <div class="benefit-box">
-                        <div class="benefit-icon">⚡</div>
-                        <h4>Rapid Validation</h4>
-                        <p>100-day gate system validates market viability before scaling. Fail fast, scale smart.</p>
-                    </div>
-                    <div class="benefit-box">
-                        <div class="benefit-icon">🌍</div>
-                        <h4>Community Trust</h4>
-                        <p>Local champions build trust through peer recommendations, not paid ads. Higher conversion rates.</p>
-                    </div>
-                    <div class="benefit-box">
-                        <div class="benefit-icon">📈</div>
-                        <h4>Scalable Model</h4>
-                        <p>Replicate the playbook across Tier-2/3 cities. Each city becomes a distribution hub.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: GROWTH OS (Website 2) -->
-    <section id="section-2" class="section-2">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>📊 SwadesiGo Growth OS</h2>
-                <p>Interactive expansion simulator. Adjust weights to rank optimal cities for Series A growth.</p>
-            </div>
-
-            <div class="dashboard">
-                <div class="control-panel">
-                    <h4>Strategic Weights</h4>
-                    
-                    <div class="control-group">
-                        <label>EV Market Potential <span id="w1-val">35</span>%</label>
-                        <input type="range" id="w1" min="0" max="100" value="35" oninput="updateRanking()">
-                    </div>
-
-                    <div class="control-group">
-                        <label>Customer Fit (Gig/SME) <span id="w2-val">40</span>%</label>
-                        <input type="range" id="w2" min="0" max="100" value="40" oninput="updateRanking()">
-                    </div>
-
-                    <div class="control-group">
-                        <label>Competitive Whitespace <span id="w3-val">25</span>%</label>
-                        <input type="range" id="w3" min="0" max="100" value="25" oninput="updateRanking()">
-                    </div>
-
-                    <div class="control-group">
-                        <label style="margin-top: 2rem; color: var(--accent);">100-Day Launch Gate</label>
-                        <label>Select City</label>
-                        <select id="gate-city" onchange="updateGate()">
-                            <option>Jaipur</option>
-                            <option>Indore</option>
-                            <option>Coimbatore</option>
-                            <option>Lucknow</option>
-                            <option>Bhubaneswar</option>
-                        </select>
-
-                        <label style="margin-top: 1rem;">Champions Onboarded</label>
-                        <input type="number" id="gate-champions" value="100" min="0" oninput="updateGate()">
-
-                        <label>Test Rides Done</label>
-                        <input type="number" id="gate-rides" value="800" min="0" oninput="updateGate()">
-
-                        <label>Conversions</label>
-                        <input type="number" id="gate-conversions" value="80" min="0" oninput="updateGate()">
-
-                        <label>Spend (Rs Lakhs)</label>
-                        <input type="number" id="gate-spend" value="6" min="0" step="0.5" oninput="updateGate()">
-                    </div>
-                </div>
-
-                <div class="results-panel" id="results-panel">
-                    <div class="result-card">
-                        <div class="big-number">10%</div>
-                        <div class="desc">Test Ride to Conversion</div>
-                    </div>
-                    <div class="result-card">
-                        <div class="big-number">Rs 7,500</div>
-                        <div class="desc">Customer Acquisition Cost</div>
-                    </div>
-                    <div class="result-card">
-                        <div class="big-number">160</div>
-                        <div class="desc">Organic Referrals</div>
-                    </div>
-                    <div class="result-card positive">
-                        <div class="big-number">SCALE</div>
-                        <div class="desc">Decision: Scale/Experiment/Exit</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="city-ranking">
-                <h3 style="color: var(--primary-dark); margin-bottom: 1.5rem;">🏙️ Wave 1 & Wave 2 City Rankings</h3>
-                <div id="ranking-list"></div>
-            </div>
-
-            <div class="financial-model">
-                <h3 style="color: var(--primary-dark); margin-top: 4rem; margin-bottom: 2rem;">💹 24-Month Financial Model</h3>
-                <div class="model-controls">
-                    <div class="model-control">
-                        <label>Volume vs Plan <span id="mv-val">100</span>%</label>
-                        <input type="range" id="mv" min="60" max="130" value="100" oninput="updateFinancial()">
-                    </div>
-                    <div class="model-control">
-                        <label>Net ASP (Rs) <span id="ma-val">80000</span></label>
-                        <input type="range" id="ma" min="70000" max="90000" step="1000" value="80000" oninput="updateFinancial()">
-                    </div>
-                    <div class="model-control">
-                        <label>Gross Margin vs Plan <span id="mg-val">0</span> pts</label>
-                        <input type="range" id="mg" min="-6" max="6" step="0.5" value="0" oninput="updateFinancial()">
-                    </div>
-                    <div class="model-control">
-                        <label>CAC vs Plan <span id="mc-val">100</span>%</label>
-                        <input type="range" id="mc" min="70" max="150" value="100" oninput="updateFinancial()">
-                    </div>
-                </div>
-                <div id="financial-output"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: REALRANGE™ (Website 3) -->
-    <section id="section-3" class="section-3">
-        <div class="section-container">
-            <div class="section-header" style="color: white;">
-                <h2 style="color: white;">🔋 RealRange™ Telematics Engine</h2>
-                <p>AI-powered dynamic range calculation based on real-world conditions—not lab estimates.</p>
-            </div>
-
-            <div class="realrange-grid">
-                <div class="realrange-calculator">
-                    <h4>Calculate Your Real Range</h4>
-                    
-                    <div class="calc-input">
-                        <label>Vehicle Weight (kg)</label>
-                        <input type="number" id="weight" value="120" min="60" max="150" oninput="calculateRange()">
-                    </div>
-
-                    <div class="calc-input">
-                        <label>Ambient Temperature (°C)</label>
-                        <input type="number" id="temp" value="28" min="5" max="45" oninput="calculateRange()">
-                    </div>
-
-                    <div class="calc-input">
-                        <label>Riding Condition</label>
-                        <select id="condition" onchange="calculateRange()">
-                            <option value="highway">Highway (Smooth)</option>
-                            <option value="city" selected>City (Mixed)</option>
-                            <option value="heavy">Heavy Traffic</option>
-                            <option value="offroad">Challenging Terrain</option>
-                        </select>
-                    </div>
-
-                    <div class="range-result">
-                        <div class="range-value" id="range-display">285 km</div>
-                        <div class="range-label">Realistic Range Estimate</div>
-                    </div>
-                </div>
-
-                <div class="realrange-features">
-                    <div class="feature-card">
-                        <h4>🎯 Why RealRange™?</h4>
-                        <p>Traditional ARAI ratings assume lab conditions. RealRange accounts for payload, temperature, terrain, and traffic to show your actual range.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>📍 Tier-2/3 Advantage</h4>
-                        <p>Range anxiety is the #1 barrier in secondary markets. Our transparent, personalized calculations build trust and confidence.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>🔋 Real-Time Optimization</h4>
-                        <p>The app learns your riding patterns and dynamically optimizes battery management, extending range by up to 15%.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>🌍 Sustainability Proof</h4>
-                        <p>Every charge is tracked, visualized, and compared to avoided emissions—gamifying your journey toward sustainability.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="realrange-tech" style="margin-top: 4rem;">
-                <h3 style="text-align: center; color: white; margin-bottom: 2rem;">RealRange™ Technology Stack</h3>
-                <div class="tech-grid">
-                    <div class="tech-card">
-                        <div class="tech-icon">📡</div>
-                        <h4>Telematics</h4>
-                        <p>Real-time GPS, accelerometer, battery metrics, and environmental sensors</p>
-                    </div>
-                    <div class="tech-card">
-                        <div class="tech-icon">🤖</div>
-                        <h4>AI Prediction</h4>
-                        <p>Machine learning models predict range based on historical patterns</p>
-                    </div>
-                    <div class="tech-card">
-                        <div class="tech-icon">🗺️</div>
-                        <h4>Route Optimization</h4>
-                        <p>Smart routing recommends paths that maximize efficiency</p>
-                    </div>
-                    <div class="tech-card">
-                        <div class="tech-icon">⚙️</div>
-                        <h4>Battery Management</h4>
-                        <p>Adaptive algorithms extend battery life and improve performance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: ANALYTICS DASHBOARD -->
-    <section id="section-4" class="section-4">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>📈 Market & Performance Analytics</h2>
-                <p>Real-time insights on EV industry trends and SwadesiGo expansion metrics</p>
-            </div>
-
-            <div class="analytics-grid">
-                <div class="analytics-card">
-                    <h3>📊 India EV Two-Wheeler Market</h3>
-                    <div class="stat-display">
-                        <div class="big-stat">10M</div>
-                        <p>Projected units by 2030</p>
-                        <small>SIAM & NITI Aayog Report</small>
-                    </div>
-                    <div class="stat-display">
-                        <div class="big-stat">45%</div>
-                        <p>CAGR (2023-2030)</p>
-                        <small>Industry Growth Rate</small>
-                    </div>
-                </div>
-
-                <div class="analytics-card">
-                    <h3>🎯 Tier-2/3 Opportunity</h3>
-                    <div class="stat-display">
-                        <div class="big-stat">65%</div>
-                        <p>Of total two-wheeler market</p>
-                        <small>Tier-2 & Tier-3 cities combined</small>
-                    </div>
-                    <div class="stat-display">
-                        <div class="big-stat">8%</div>
-                        <p>Current EV penetration</p>
-                        <small>Still vastly underserved</small>
-                    </div>
-                </div>
-
-                <div class="analytics-card">
-                    <h3>💼 Gig Economy Scale</h3>
-                    <div class="stat-display">
-                        <div class="big-stat">4.3Cr</div>
-                        <p>Gig workers in India</p>
-                        <small>NASSCOM & Teamlease Report</small>
-                    </div>
-                    <div class="stat-display">
-                        <div class="big-stat">70%</div>
-                        <p>Use two-wheelers for work</p>
-                        <small>Primary target segment</small>
-                    </div>
-                </div>
-
-                <div class="analytics-card">
-                    <h3>⚡ Range Anxiety Data</h3>
-                    <div class="stat-display">
-                        <div class="big-stat">62%</div>
-                        <p>Cite range anxiety as barrier</p>
-                        <small>BCG Consumer Survey 2024</small>
-                    </div>
-                    <div class="stat-display">
-                        <div class="big-stat">3.5x</div>
-                        <p>Higher purchase intent</p>
-                        <small>With transparent range info</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="performance-tracker">
-                <h3 style="color: var(--primary-dark); margin-bottom: 2rem;">SwadesiGo Expansion Roadmap (2024-2026)</h3>
-                <div class="roadmap">
-                    <div class="roadmap-stage">
-                        <div class="stage-header">
-                            <h4>Wave 1: Validate (Q1-Q2 2025)</h4>
-                            <span class="stage-badge">Current</span>
-                        </div>
-                        <div class="stage-content">
-                            <p><strong>Cities:</strong> Jaipur, Indore, Coimbatore, Lucknow, Bhubaneswar</p>
-                            <p><strong>Goal:</strong> 500 Champions, 5,000 Test Rides, 250 Conversions</p>
-                            <p><strong>Spend:</strong> Rs 2.5 Cr</p>
-                        </div>
-                    </div>
-
-                    <div class="roadmap-stage">
-                        <div class="stage-header">
-                            <h4>Wave 2: Scale (Q3-Q4 2025)</h4>
-                            <span class="stage-badge">Next</span>
-                        </div>
-                        <div class="stage-content">
-                            <p><strong>Cities:</strong> Ahmedabad, Kochi, Pune, Hyderabad, Bengaluru</p>
-                            <p><strong>Goal:</strong> 1,000 Champions, 12,000 Test Rides, 750 Conversions</p>
-                            <p><strong>Spend:</strong> Rs 5 Cr</p>
-                        </div>
-                    </div>
-
-                    <div class="roadmap-stage">
-                        <div class="stage-header">
-                            <h4>Wave 3: Dealerships (Q1-Q2 2026)</h4>
-                            <span class="stage-badge">Future</span>
-                        </div>
-                        <div class="stage-content">
-                            <p><strong>Cities:</strong> All Wave 1 & Wave 2 cities</p>
-                            <p><strong>Goal:</strong> 10 dealerships, 2,000 customers, Rs 50Cr ARR</p>
-                            <p><strong>Model:</strong> Community-owned franchise dealerships</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="market-comparison">
-                <h3 style="color: var(--primary-dark); margin-bottom: 2rem;">Why SwadesiGo Wins vs Competitors</h3>
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Factor</th>
-                            <th>Ola Electric</th>
-                            <th>Ather Energy</th>
-                            <th>TVS iQube</th>
-                            <th>SwadesiGo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Market Focus</strong></td>
-                            <td>Tier-1 Urban</td>
-                            <td>Tier-1 Premium</td>
-                            <td>All-India, Traditional</td>
-                            <td>Tier-2/3 Community</td>
-                        </tr>
-                        <tr>
-                            <td><strong>CAC Strategy</strong></td>
-                            <td>Heavy Ad Spend</td>
-                            <td>Brand Premium</td>
-                            <td>Dealer Network</td>
-                            <td>Community Champions</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Price Point</strong></td>
-                            <td>Rs 80-100k</td>
-                            <td>Rs 100-150k</td>
-                            <td>Rs 60-80k</td>
-                            <td>Rs 45-65k</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Capital Efficiency</strong></td>
-                            <td>Moderate</td>
-                            <td>Low</td>
-                            <td>High</td>
-                            <td>Very High</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Range Transparency</strong></td>
-                            <td>ARAI Only</td>
-                            <td>ARAI Only</td>
-                            <td>ARAI Only</td>
-                            <td>RealRange™ Dynamic</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 SwadesiGo. Demand Before Dealership. | <a href="https://github.com/riddhiman-nitr/swadesi-go-website" target="_blank">GitHub</a></p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

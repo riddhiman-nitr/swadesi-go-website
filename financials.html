@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwadesiGo | Financial Projections</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">🚲 SwadesiGo</a>
+    <ul class="nav-links">
+        <li><a href="market.html">Market Intelligence</a></li>
+        <li><a href="gtm.html">Go-to-Market</a></li>
+        <li><a href="simulator.html">R2W Simulator</a></li>
+        <li><a href="financials.html">Financials</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <section class="section">
+        <h2 class="section-title">Financial Projections & Unit Economics</h2>
+        <p class="section-subtitle">Conservative revenue ramp based on Wave 1-3 expansion, with improving unit economics as manufacturing scale and community distribution matures.</p>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <div class="chart-title">Revenue Projection (FY2025-FY2027)</div>
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <div class="chart-title">Unit Economics Improvement</div>
+                <canvas id="unitEconomicsChart"></canvas>
+            </div>
+        </div>
+
+        <div class="market-grid" style="margin-top: 2rem;">
+            <div class="market-card">
+                <h3>Average Selling Price (ASP)</h3>
+                <div class="number">₹75,000</div>
+                <p>Initial price point targeting gig workers and value-conscious segments. ASP to increase to ₹85K by Year 3 as premium variants launch.</p>
+            </div>
+            <div class="market-card">
+                <h3>Gross Margin (Year 1)</h3>
+                <div class="number">28%</div>
+                <p>Conservative estimate including COGS, delivery, and champion commissions. Expected to expand to 38% by Year 3 with manufacturing scale.</p>
+            </div>
+            <div class="market-card">
+                <h3>CAC (Community Model)</h3>
+                <div class="number">₹2,500</div>
+                <p>Champion-driven acquisition cost 70% lower than digital marketing. Payback period: 6-8 months. Industry avg (traditional): ₹8,000+</p>
+            </div>
+            <div class="market-card">
+                <h3>LTV (Lifetime Value)</h3>
+                <div class="number">₹2.8L</div>
+                <p>Includes vehicle sales, maintenance, battery replacement, and connected services over 5-year customer lifecycle.</p>
+            </div>
+            <div class="market-card">
+                <h3>Capital Efficiency</h3>
+                <div class="number">3:1</div>
+                <p>Revenue to Series A capital ratio by end of Year 2. Breakeven operational EBITDA achieved by Month 28.</p>
+            </div>
+            <div class="market-card">
+                <h3>Series A Raise Target</h3>
+                <div class="number">₹50-75 Cr</div>
+                <p>Use of funds: 40% manufacturing capacity, 30% go-to-market expansion, 20% R&D, 10% working capital.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 SwadesiGo. Engineered for Indian Roads. Crafted for Real Impact.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
