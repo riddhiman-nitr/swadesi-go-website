@@ -4,664 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwadesiGo - Demand Before Dealership</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Outfit:wght@400;600;700;800&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2d5a3d;
-            --primary-light: #3d7a4d;
-            --primary-dark: #1e3f2b;
-            --accent: #d4a574;
-            --accent-dark: #b8914d;
-            --danger: #c94844;
-            --success: #2d9c5e;
-            --warning: #d4a574;
-            --bg-light: #f8faf7;
-            --bg-dark: #0f1410;
-            --text-dark: #1a1f1b;
-            --text-light: #6b7370;
-            --border: #e0e5e1;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            cursor: pointer;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Sections */
-        section {
-            display: none;
-            min-height: 100vh;
-        }
-
-        section.active {
-            display: block;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 120px;
-            background: linear-gradient(135deg, #f8faf7 0%, #eff3ed 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--primary-dark);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-text .tagline {
-            font-size: 1.3rem;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .stat-box {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .stat-box .number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .stat-box .label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 600;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            border: none;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(45, 90, 61, 0.2);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .hero-visual {
-            background: white;
-            border-radius: 16px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .hero-visual-content {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-visual h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .hero-visual p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* Section 1: SwadesiGo Circle */
-        .section-1 {
-            padding: 80px 2rem;
-            background: white;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.8rem;
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .circle-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .circle-card {
-            background: linear-gradient(135deg, #f8faf7 0%, #fff 100%);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .circle-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(45, 90, 61, 0.1);
-            border-color: var(--primary);
-        }
-
-        .circle-card .icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .circle-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .circle-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Metrics Dashboard */
-        .metrics-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 4rem 2rem;
-            border-radius: 16px;
-            margin-bottom: 4rem;
-            color: white;
-        }
-
-        .metrics-section h3 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-        }
-
-        .metric {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .metric .value {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric .label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .demo-label {
-            display: inline-block;
-            background: rgba(212, 165, 116, 0.2);
-            color: var(--accent);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        /* Funnel Section */
-        .funnel-section {
-            margin-top: 4rem;
-        }
-
-        .funnel {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 3rem;
-        }
-
-        .funnel-stage {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .funnel-bar {
-            flex-grow: 1;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-            padding: 1.5rem;
-            border-radius: 8px;
-            color: white;
-            font-weight: 700;
-            text-align: center;
-            position: relative;
-        }
-
-        .funnel-bar.stage-2 {
-            background: linear-gradient(90deg, var(--primary-light) 0%, var(--accent) 100%);
-            width: 90%;
-        }
-
-        .funnel-bar.stage-3 {
-            background: linear-gradient(90deg, #5a8b6b 0%, var(--accent) 100%);
-            width: 75%;
-        }
-
-        .funnel-bar.stage-4 {
-            background: linear-gradient(90deg, #7a9f8b 0%, var(--accent) 100%);
-            width: 60%;
-        }
-
-        .funnel-bar.stage-5 {
-            background: linear-gradient(90deg, var(--success) 0%, var(--accent) 100%);
-            width: 50%;
-        }
-
-        .funnel-arrow {
-            font-size: 2rem;
-            color: var(--text-light);
-        }
-
-        /* Section 2: Growth OS */
-        .section-2 {
-            padding: 80px 2rem;
-            background: white;
-        }
-
-        .dashboard {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .control-panel {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .control-panel h4 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .control-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .control-group label {
-            display: block;
-            color: var(--text-dark);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .control-group input[type="range"],
-        .control-group input[type="number"],
-        .control-group select {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem;
-            accent-color: var(--primary);
-        }
-
-        .results-panel {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .result-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .result-card .big-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .result-card .desc {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 600;
-        }
-
-        .result-card.negative .big-number {
-            color: var(--danger);
-        }
-
-        /* City Ranking */
-        .city-ranking {
-            margin-top: 3rem;
-        }
-
-        .city-row {
-            display: grid;
-            grid-template-columns: 40px 150px 1fr 100px;
-            gap: 1rem;
-            align-items: center;
-            padding: 1.2rem;
-            background: var(--bg-light);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border: 1px solid var(--border);
-        }
-
-        .city-rank {
-            font-weight: 800;
-            color: var(--primary);
-            font-size: 1.3rem;
-        }
-
-        .city-name {
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .city-bar {
-            height: 8px;
-            background: var(--border);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .city-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-            border-radius: 4px;
-            transition: width 0.5s;
-        }
-
-        .city-score {
-            text-align: right;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        /* Section 3: RealRange™ */
-        .section-3 {
-            padding: 80px 2rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-        }
-
-        .realrange-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .realrange-calculator {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        .realrange-calculator h4 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .calc-input {
-            margin-bottom: 1.5rem;
-        }
-
-        .calc-input label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .calc-input input {
-            width: 100%;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.9);
-            color: var(--text-dark);
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.95rem;
-        }
-
-        .range-result {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .range-result .range-value {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .range-result .range-label {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .realrange-features {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent);
-        }
-
-        .feature-card h4 {
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-card p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                padding-top: 2rem;
-            }
-
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
-
-            .results-panel {
-                grid-template-columns: 1fr;
-            }
-
-            .realrange-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .city-row {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -671,10 +14,11 @@
             <li><a onclick="showSection('section-1')">Circle</a></li>
             <li><a onclick="showSection('section-2')">Growth OS</a></li>
             <li><a onclick="showSection('section-3')">RealRange™</a></li>
+            <li><a onclick="showSection('section-4')">Analytics</a></li>
         </ul>
     </nav>
 
-    <!-- Section 0: Hero / Landing Page -->
+    <!-- SECTION 0: HERO / LANDING PAGE -->
     <section id="hero" class="hero active">
         <div class="hero-content">
             <div class="hero-text">
@@ -717,7 +61,7 @@
         </div>
     </section>
 
-    <!-- Section 1: SwadesiGo Circle -->
+    <!-- SECTION 1: SWADESI GO CIRCLE (Website 1) -->
     <section id="section-1" class="section-1">
         <div class="section-container">
             <div class="section-header">
@@ -754,7 +98,7 @@
                     </div>
                     <div class="metric">
                         <div class="value">63</div>
-                        <div class="label">Onboarded</div>
+                        <div class="label">Onboarded (63%)</div>
                     </div>
                     <div class="metric">
                         <div class="value">427</div>
@@ -809,10 +153,36 @@
                     </div>
                 </div>
             </div>
+
+            <div class="circle-benefits">
+                <h3 style="color: var(--primary-dark); margin-top: 4rem; margin-bottom: 2rem;">Why the 100 Champions Model Works</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-box">
+                        <div class="benefit-icon">💰</div>
+                        <h4>Capital Efficient</h4>
+                        <p>Reduce CAC by 60% vs. traditional dealership model. Build demand organically through community advocacy.</p>
+                    </div>
+                    <div class="benefit-box">
+                        <div class="benefit-icon">⚡</div>
+                        <h4>Rapid Validation</h4>
+                        <p>100-day gate system validates market viability before scaling. Fail fast, scale smart.</p>
+                    </div>
+                    <div class="benefit-box">
+                        <div class="benefit-icon">🌍</div>
+                        <h4>Community Trust</h4>
+                        <p>Local champions build trust through peer recommendations, not paid ads. Higher conversion rates.</p>
+                    </div>
+                    <div class="benefit-box">
+                        <div class="benefit-icon">📈</div>
+                        <h4>Scalable Model</h4>
+                        <p>Replicate the playbook across Tier-2/3 cities. Each city becomes a distribution hub.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Section 2: Growth OS -->
+    <!-- SECTION 2: GROWTH OS (Website 2) -->
     <section id="section-2" class="section-2">
         <div class="section-container">
             <div class="section-header">
@@ -840,7 +210,7 @@
                     </div>
 
                     <div class="control-group">
-                        <label style="margin-top: 2rem; color: var(--accent);">Launch Gate Simulator</label>
+                        <label style="margin-top: 2rem; color: var(--accent);">100-Day Launch Gate</label>
                         <label>Select City</label>
                         <select id="gate-city" onchange="updateGate()">
                             <option>Jaipur</option>
@@ -886,14 +256,35 @@
 
             <div class="city-ranking">
                 <h3 style="color: var(--primary-dark); margin-bottom: 1.5rem;">Wave 1 & Wave 2 City Rankings</h3>
-                <div id="ranking-list">
-                    <!-- Cities will be populated by JS -->
+                <div id="ranking-list"></div>
+            </div>
+
+            <div class="financial-model">
+                <h3 style="color: var(--primary-dark); margin-top: 4rem; margin-bottom: 2rem;">24-Month Financial Model</h3>
+                <div class="model-controls">
+                    <div class="model-control">
+                        <label>Volume vs Plan <span id="mv-val">100</span>%</label>
+                        <input type="range" id="mv" min="60" max="130" value="100" oninput="updateFinancial()">
+                    </div>
+                    <div class="model-control">
+                        <label>Net ASP (Rs) <span id="ma-val">80000</span></label>
+                        <input type="range" id="ma" min="70000" max="90000" step="1000" value="80000" oninput="updateFinancial()">
+                    </div>
+                    <div class="model-control">
+                        <label>Gross Margin vs Plan <span id="mg-val">0</span> pts</label>
+                        <input type="range" id="mg" min="-6" max="6" step="0.5" value="0" oninput="updateFinancial()">
+                    </div>
+                    <div class="model-control">
+                        <label>CAC vs Plan <span id="mc-val">100</span>%</label>
+                        <input type="range" id="mc" min="70" max="150" value="100" oninput="updateFinancial()">
+                    </div>
                 </div>
+                <div id="financial-output"></div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: RealRange™ -->
+    <!-- SECTION 3: REALRANGE™ (Website 3) -->
     <section id="section-3" class="section-3">
         <div class="section-container">
             <div class="section-header" style="color: white;">
@@ -953,133 +344,200 @@
                     </div>
                 </div>
             </div>
+
+            <div class="realrange-tech" style="margin-top: 4rem;">
+                <h3 style="text-align: center; color: white; margin-bottom: 2rem;">RealRange™ Technology Stack</h3>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">📡</div>
+                        <h4>Telematics</h4>
+                        <p>Real-time GPS, accelerometer, battery metrics, and environmental sensors</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">🤖</div>
+                        <h4>AI Prediction</h4>
+                        <p>Machine learning models predict range based on historical patterns</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">🗺️</div>
+                        <h4>Route Optimization</h4>
+                        <p>Smart routing recommends paths that maximize efficiency</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">⚙️</div>
+                        <h4>Battery Management</h4>
+                        <p>Adaptive algorithms extend battery life and improve performance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: ANALYTICS DASHBOARD (Website 3 Continued) -->
+    <section id="section-4" class="section-4">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Market & Performance Analytics</h2>
+                <p>Real-time insights on EV industry trends and SwadesiGo expansion metrics</p>
+            </div>
+
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <h3>📊 India EV Two-Wheeler Market</h3>
+                    <div class="stat-display">
+                        <div class="big-stat">10M</div>
+                        <p>Projected units by 2030</p>
+                        <small>SIAM & NITI Aayog Report</small>
+                    </div>
+                    <div class="stat-display">
+                        <div class="big-stat">45%</div>
+                        <p>CAGR (2023-2030)</p>
+                        <small>Industry Growth Rate</small>
+                    </div>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>🎯 Tier-2/3 Opportunity</h3>
+                    <div class="stat-display">
+                        <div class="big-stat">65%</div>
+                        <p>Of total two-wheeler market</p>
+                        <small>Tier-2 & Tier-3 cities combined</small>
+                    </div>
+                    <div class="stat-display">
+                        <div class="big-stat">8%</div>
+                        <p>Current EV penetration</p>
+                        <small>Still vastly underserved</small>
+                    </div>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>💼 Gig Economy Scale</h3>
+                    <div class="stat-display">
+                        <div class="big-stat">4.3Cr</div>
+                        <p>Gig workers in India</p>
+                        <small>NASSCOM & Teamlease Report</small>
+                    </div>
+                    <div class="stat-display">
+                        <div class="big-stat">70%</div>
+                        <p>Use two-wheelers for work</p>
+                        <small>Primary target segment</small>
+                    </div>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>⚡ Range Anxiety Data</h3>
+                    <div class="stat-display">
+                        <div class="big-stat">62%</div>
+                        <p>Cite range anxiety as barrier</p>
+                        <small>BCG Consumer Survey 2024</small>
+                    </div>
+                    <div class="stat-display">
+                        <div class="big-stat">3.5x</div>
+                        <p>Higher purchase intent</p>
+                        <small>With transparent range info</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="performance-tracker">
+                <h3 style="color: var(--primary-dark); margin-bottom: 2rem;">SwadesiGo Expansion Roadmap (2024-2026)</h3>
+                <div class="roadmap">
+                    <div class="roadmap-stage">
+                        <div class="stage-header">
+                            <h4>Wave 1: Validate (Q1-Q2 2025)</h4>
+                            <span class="stage-badge">Current</span>
+                        </div>
+                        <div class="stage-content">
+                            <p><strong>Cities:</strong> Jaipur, Indore, Coimbatore, Lucknow, Bhubaneswar</p>
+                            <p><strong>Goal:</strong> 500 Champions, 5,000 Test Rides, 250 Conversions</p>
+                            <p><strong>Spend:</strong> Rs 2.5 Cr</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-stage">
+                        <div class="stage-header">
+                            <h4>Wave 2: Scale (Q3-Q4 2025)</h4>
+                            <span class="stage-badge">Next</span>
+                        </div>
+                        <div class="stage-content">
+                            <p><strong>Cities:</strong> Ahmedabad, Kochi, Pune, Hyderabad, Bengaluru</p>
+                            <p><strong>Goal:</strong> 1,000 Champions, 12,000 Test Rides, 750 Conversions</p>
+                            <p><strong>Spend:</strong> Rs 5 Cr</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-stage">
+                        <div class="stage-header">
+                            <h4>Wave 3: Dealerships (Q1-Q2 2026)</h4>
+                            <span class="stage-badge">Future</span>
+                        </div>
+                        <div class="stage-content">
+                            <p><strong>Cities:</strong> All Wave 1 & Wave 2 cities</p>
+                            <p><strong>Goal:</strong> 10 dealerships, 2,000 customers, Rs 50Cr ARR</p>
+                            <p><strong>Model:</strong> Community-owned franchise dealerships</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-comparison">
+                <h3 style="color: var(--primary-dark); margin-bottom: 2rem;">Why SwadesiGo Wins vs Competitors</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Factor</th>
+                            <th>Ola Electric</th>
+                            <th>Ather Energy</th>
+                            <th>TVS iQube</th>
+                            <th>SwadesiGo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Market Focus</strong></td>
+                            <td>Tier-1 Urban</td>
+                            <td>Tier-1 Premium</td>
+                            <td>All-India, Traditional</td>
+                            <td>Tier-2/3 Community</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAC Strategy</strong></td>
+                            <td>Heavy Ad Spend</td>
+                            <td>Brand Premium</td>
+                            <td>Dealer Network</td>
+                            <td>Community Champions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Price Point</strong></td>
+                            <td>Rs 80-100k</td>
+                            <td>Rs 100-150k</td>
+                            <td>Rs 60-80k</td>
+                            <td>Rs 45-65k</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Capital Efficiency</strong></td>
+                            <td>Moderate</td>
+                            <td>Low</td>
+                            <td>High</td>
+                            <td>Very High</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Range Transparency</strong></td>
+                            <td>ARAI Only</td>
+                            <td>ARAI Only</td>
+                            <td>ARAI Only</td>
+                            <td>RealRange™ Dynamic</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 SwadesiGo. Demand Before Dealership. | <a href="#" style="color: var(--accent); text-decoration: none;">GitHub</a> | <a href="#" style="color: var(--accent); text-decoration: none;">Deck</a></p>
+        <p>&copy; 2024 SwadesiGo. Demand Before Dealership. | <a href="https://github.com/riddhiman-nitr/swadesi-go-website" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a> | Series A Pitch</p>
     </footer>
 
-    <script>
-        // Navigation & Section Management
-        function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-            window.scrollTo(0, 0);
-        }
-
-        // Growth OS - City Ranking Logic
-        const cities = [
-            { name: 'Jaipur', wave: 1, scores: { ev: 4, fit: 5, whitespace: 4 } },
-            { name: 'Indore', wave: 1, scores: { ev: 3.5, fit: 5, whitespace: 4 } },
-            { name: 'Coimbatore', wave: 1, scores: { ev: 3.5, fit: 4.5, whitespace: 4 } },
-            { name: 'Lucknow', wave: 1, scores: { ev: 4.5, fit: 4, whitespace: 4 } },
-            { name: 'Bhubaneswar', wave: 1, scores: { ev: 3, fit: 4, whitespace: 4.5 } },
-            { name: 'Ahmedabad', wave: 2, scores: { ev: 4, fit: 4, whitespace: 3 } },
-            { name: 'Kochi', wave: 2, scores: { ev: 3, fit: 3.5, whitespace: 3 } },
-            { name: 'Pune', wave: 2, scores: { ev: 4.5, fit: 3.5, whitespace: 2 } },
-        ];
-
-        function updateRanking() {
-            const w1 = parseFloat(document.getElementById('w1').value);
-            const w2 = parseFloat(document.getElementById('w2').value);
-            const w3 = parseFloat(document.getElementById('w3').value);
-            const total = w1 + w2 + w3 || 1;
-
-            document.getElementById('w1-val').textContent = Math.round((w1 / total) * 100);
-            document.getElementById('w2-val').textContent = Math.round((w2 / total) * 100);
-            document.getElementById('w3-val').textContent = Math.round((w3 / total) * 100);
-
-            const scored = cities.map((c, idx) => ({
-                ...c,
-                score: ((c.scores.ev * w1 + c.scores.fit * w2 + c.scores.whitespace * w3) / total) * 20
-            })).sort((a, b) => b.score - a.score);
-
-            let html = '';
-            scored.forEach((c, idx) => {
-                const pct = (c.score / 100) * 100;
-                html += `
-                    <div class="city-row">
-                        <div class="city-rank">${idx + 1}</div>
-                        <div class="city-name">${c.name}</div>
-                        <div class="city-bar">
-                            <div class="city-bar-fill" style="width: ${pct}%"></div>
-                        </div>
-                        <div class="city-score">${c.score.toFixed(1)}</div>
-                    </div>
-                `;
-            });
-
-            document.getElementById('ranking-list').innerHTML = html;
-        }
-
-        function updateGate() {
-            const champions = parseInt(document.getElementById('gate-champions').value) || 0;
-            const rides = parseInt(document.getElementById('gate-rides').value) || 0;
-            const conversions = parseInt(document.getElementById('gate-conversions').value) || 0;
-            const spend = parseFloat(document.getElementById('gate-spend').value) || 0;
-
-            const cac = conversions > 0 ? Math.round((spend * 100000) / conversions) : 0;
-            const convRate = rides > 0 ? ((conversions / rides) * 100).toFixed(1) : 0;
-
-            let decision = 'EXPERIMENT';
-            if (champions >= 100 && rides >= 800 && conversions >= 80 && cac <= 9000) {
-                decision = 'SCALE ✓';
-            } else if (conversions < 40 || cac > 13500) {
-                decision = 'EXIT ✗';
-            }
-
-            document.getElementById('results-panel').innerHTML = `
-                <div class="result-card">
-                    <div class="big-number">${convRate}%</div>
-                    <div class="desc">Test Ride to Conversion</div>
-                </div>
-                <div class="result-card">
-                    <div class="big-number">Rs ${cac.toLocaleString('en-IN')}</div>
-                    <div class="desc">Customer Acquisition Cost</div>
-                </div>
-                <div class="result-card">
-                    <div class="big-number">${Math.round(rides * 0.2)}</div>
-                    <div class="desc">Est. Referrals Generated</div>
-                </div>
-                <div class="result-card ${decision.includes('EXIT') ? 'negative' : ''}">
-                    <div class="big-number">${decision}</div>
-                    <div class="desc">100-Day Decision Gate</div>
-                </div>
-            `;
-        }
-
-        // RealRange™ Calculator
-        function calculateRange() {
-            const weight = parseFloat(document.getElementById('weight').value) || 120;
-            const temp = parseFloat(document.getElementById('temp').value) || 28;
-            const condition = document.getElementById('condition').value;
-
-            // Base range at 120kg, 28°C, city condition
-            let baseRange = 320;
-
-            // Temperature adjustment
-            const tempFactor = 1 - Math.abs(temp - 28) * 0.01;
-
-            // Weight adjustment
-            const weightFactor = 1 - (weight - 120) * 0.005;
-
-            // Condition multiplier
-            const conditionFactors = {
-                highway: 1.15,
-                city: 1.0,
-                heavy: 0.85,
-                offroad: 0.70
-            };
-
-            const range = Math.round(baseRange * tempFactor * weightFactor * conditionFactors[condition]);
-            document.getElementById('range-display').textContent = range + ' km';
-        }
-
-        // Initialize
-        updateRanking();
-        updateGate();
-        calculateRange();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
