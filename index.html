@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" class="logo">SwadesiGo</a>
+        <a href="#" class="logo" onclick="showSection('hero'); return false;">SwadesiGo</a>
         <ul class="nav-links">
             <li><a onclick="showSection('hero')">Home</a></li>
             <li><a onclick="showSection('section-1')">Circle</a></li>
@@ -20,42 +20,46 @@
 
     <!-- SECTION 0: HERO / LANDING PAGE -->
     <section id="hero" class="hero active">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="tagline">Demand Before Dealership</div>
-                <h1>Smart Mobility for India</h1>
-                <p>SwadesiGo is revolutionizing two-wheeler mobility by building community-driven, capital-efficient growth in Tier-2 and Tier-3 cities. We don't chase dealerships—we build demand first.</p>
-                
-                <div class="hero-stats">
-                    <div class="stat-box">
-                        <div class="number">100</div>
-                        <div class="label">Champions Per City</div>
+        <div class="section-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="tagline">Demand Before Dealership</div>
+                    <h1>Smart Mobility for India</h1>
+                    <p>SwadesiGo is revolutionizing two-wheeler mobility by building community-driven, capital-efficient growth in Tier-2 and Tier-3 cities. We don't chase dealerships—we build demand first.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <div class="number">100</div>
+                            <div class="label">Champions Per City</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">63</div>
+                            <div class="label">Jaipur Onboarded</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">427</div>
+                            <div class="label">Test Rides Generated</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">31</div>
+                            <div class="label">Conversions</div>
+                        </div>
                     </div>
-                    <div class="stat-box">
-                        <div class="number">63</div>
-                        <div class="label">Jaipur Onboarded</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="number">427</div>
-                        <div class="label">Test Rides Generated</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="number">31</div>
-                        <div class="label">Conversions</div>
-                    </div>
-                </div>
 
-                <div class="cta-buttons">
-                    <button class="btn btn-primary" onclick="showSection('section-1')">Explore Circle</button>
-                    <button class="btn btn-secondary" onclick="showSection('section-2')">View Growth OS</button>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="showSection('section-1')">🎯 Explore Circle</button>
+                        <button class="btn btn-secondary" onclick="showSection('section-2')">📊 View Growth OS</button>
+                        <button class="btn btn-secondary" onclick="showSection('section-3')">🔋 RealRange™</button>
+                        <button class="btn btn-secondary" onclick="showSection('section-4')">📈 Analytics</button>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-visual-content">🔋</div>
-                <h3>India's EV Momentum</h3>
-                <p>The Indian EV two-wheeler market is projected to reach 10M units by 2030. SwadesiGo is built to capture this wave with a capital-efficient, community-first model.</p>
-                <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                    <strong>Market Context:</strong> Tier-2/3 cities represent 65% of India's two-wheeler market with minimal EV penetration.
+                <div class="hero-visual">
+                    <div class="hero-visual-content">🔋</div>
+                    <h3>India's EV Momentum</h3>
+                    <p>The Indian EV two-wheeler market is projected to reach 10M units by 2030. SwadesiGo is built to capture this wave with a capital-efficient, community-first model.</p>
+                    <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                        <strong>Market Context:</strong> Tier-2/3 cities represent 65% of India's two-wheeler market with minimal EV penetration.
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,7 +69,7 @@
     <section id="section-1" class="section-1">
         <div class="section-container">
             <div class="section-header">
-                <h2>SwadesiGo Circle</h2>
+                <h2>🎯 SwadesiGo Circle</h2>
                 <p>The "100 Champions" Playbook: Building demand through hyper-local community networks before investing in dealerships.</p>
             </div>
 
@@ -87,8 +91,88 @@
                 </div>
             </div>
 
+            <!-- INTERACTIVE CHAMPIONS SIMULATOR -->
+            <div class="champions-simulator">
+                <h3 style="color: var(--primary-dark); margin-bottom: 2rem;">📱 Interactive Champions Simulator</h3>
+                
+                <div class="simulator-grid">
+                    <div class="simulator-controls">
+                        <h4>Adjust City Metrics</h4>
+                        
+                        <div class="slider-group">
+                            <label>Champions Onboarded <span id="champVal">100</span>/100</label>
+                            <input type="range" id="champSlider" min="0" max="100" value="100" oninput="updateChampions()">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="champProgress" style="width: 100%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Test Rides Generated <span id="ridesVal">800</span>/1000</label>
+                            <input type="range" id="ridesSlider" min="0" max="1000" value="800" oninput="updateChampions()">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="ridesProgress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Conversions Achieved <span id="convVal">80</span>/150</label>
+                            <input type="range" id="convSlider" min="0" max="150" value="80" oninput="updateChampions()">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="convProgress" style="width: 53.33%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Referral Rate <span id="refVal">20</span>%</label>
+                            <input type="range" id="refSlider" min="0" max="100" value="20" oninput="updateChampions()">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="refProgress" style="width: 20%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="slider-group">
+                            <label>CAC Target (Rs) <span id="cacVal">9000</span></label>
+                            <input type="range" id="cacSlider" min="5000" max="15000" step="500" value="9000" oninput="updateChampions()">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Spend Budget (Rs Lakh) <span id="spendVal">6</span></label>
+                            <input type="range" id="spendSlider" min="1" max="15" step="0.5" value="6" oninput="updateChampions()">
+                        </div>
+                    </div>
+
+                    <div class="simulator-results">
+                        <div class="results-container" id="champResults">
+                            <div class="result-metric">
+                                <div class="metric-label">Conversion Rate</div>
+                                <div class="metric-value" id="convRate">10%</div>
+                            </div>
+                            <div class="result-metric">
+                                <div class="metric-label">Actual CAC</div>
+                                <div class="metric-value" id="actualCAC">Rs 7,500</div>
+                            </div>
+                            <div class="result-metric">
+                                <div class="metric-label">Est. Referrals</div>
+                                <div class="metric-value" id="estRef">160</div>
+                            </div>
+                            <div class="result-metric status-good" id="statusBox">
+                                <div class="metric-label">100-Day Gate</div>
+                                <div class="metric-value">✓ SCALE</div>
+                            </div>
+                        </div>
+
+                        <div class="decision-box" id="decisionBox">
+                            <h4 id="decisionTitle">✓ SCALE</h4>
+                            <p id="decisionMsg">All gates met! Ready to unlock pop-up hub and franchise talks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- METRICS SECTION -->
             <div class="metrics-section">
-                <div class="demo-label">Jaipur Champions - Demo/Simulation Data</div>
+                <div class="demo-label">Jaipur Champions - Simulation Data</div>
                 <h3>🟡 VALIDATE (Current Status)</h3>
                 
                 <div class="metrics-grid">
@@ -119,6 +203,7 @@
                 </div>
             </div>
 
+            <!-- FUNNEL SECTION -->
             <div class="funnel-section">
                 <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Launch Progression: Demand Before Dealership</h3>
                 <div class="funnel">
@@ -127,25 +212,25 @@
                             <span>100 Champions Onboarded</span>
                         </div>
                     </div>
-                    <div class="funnel-arrow">↓</div>
+                    <div class="funnel-arrow-center">↓</div>
                     <div class="funnel-stage">
                         <div class="funnel-bar stage-2">
                             <span>1,000 Test Rides Generated</span>
                         </div>
                     </div>
-                    <div class="funnel-arrow">↓</div>
+                    <div class="funnel-arrow-center">↓</div>
                     <div class="funnel-stage">
                         <div class="funnel-bar stage-3">
                             <span>500 Qualified Leads</span>
                         </div>
                     </div>
-                    <div class="funnel-arrow">↓</div>
+                    <div class="funnel-arrow-center">↓</div>
                     <div class="funnel-stage">
                         <div class="funnel-bar stage-4">
                             <span>150+ Customers</span>
                         </div>
                     </div>
-                    <div class="funnel-arrow">↓</div>
+                    <div class="funnel-arrow-center">↓</div>
                     <div class="funnel-stage">
                         <div class="funnel-bar stage-5">
                             <span>🎯 UNLOCK: Dealership Ready</span>
@@ -154,6 +239,7 @@
                 </div>
             </div>
 
+            <!-- BENEFITS SECTION -->
             <div class="circle-benefits">
                 <h3 style="color: var(--primary-dark); margin-top: 4rem; margin-bottom: 2rem;">Why the 100 Champions Model Works</h3>
                 <div class="benefits-grid">
@@ -186,8 +272,8 @@
     <section id="section-2" class="section-2">
         <div class="section-container">
             <div class="section-header">
-                <h2>SwadesiGo Growth OS</h2>
-                <p>Interactive expansion simulator. Adjust weights to rank optimal cities for Series A growth. <strong style="color: var(--warning);">Simulation Data</strong></p>
+                <h2>📊 SwadesiGo Growth OS</h2>
+                <p>Interactive expansion simulator. Adjust weights to rank optimal cities for Series A growth.</p>
             </div>
 
             <div class="dashboard">
@@ -236,31 +322,31 @@
 
                 <div class="results-panel" id="results-panel">
                     <div class="result-card">
-                        <div class="big-number">7.2%</div>
+                        <div class="big-number">10%</div>
                         <div class="desc">Test Ride to Conversion</div>
                     </div>
                     <div class="result-card">
-                        <div class="big-number">Rs 9,677</div>
+                        <div class="big-number">Rs 7,500</div>
                         <div class="desc">Customer Acquisition Cost</div>
                     </div>
                     <div class="result-card">
-                        <div class="big-number">86</div>
+                        <div class="big-number">160</div>
                         <div class="desc">Organic Referrals</div>
                     </div>
-                    <div class="result-card negative">
-                        <div class="big-number">EXIT</div>
+                    <div class="result-card positive">
+                        <div class="big-number">SCALE</div>
                         <div class="desc">Decision: Scale/Experiment/Exit</div>
                     </div>
                 </div>
             </div>
 
             <div class="city-ranking">
-                <h3 style="color: var(--primary-dark); margin-bottom: 1.5rem;">Wave 1 & Wave 2 City Rankings</h3>
+                <h3 style="color: var(--primary-dark); margin-bottom: 1.5rem;">🏙️ Wave 1 & Wave 2 City Rankings</h3>
                 <div id="ranking-list"></div>
             </div>
 
             <div class="financial-model">
-                <h3 style="color: var(--primary-dark); margin-top: 4rem; margin-bottom: 2rem;">24-Month Financial Model</h3>
+                <h3 style="color: var(--primary-dark); margin-top: 4rem; margin-bottom: 2rem;">💹 24-Month Financial Model</h3>
                 <div class="model-controls">
                     <div class="model-control">
                         <label>Volume vs Plan <span id="mv-val">100</span>%</label>
@@ -288,7 +374,7 @@
     <section id="section-3" class="section-3">
         <div class="section-container">
             <div class="section-header" style="color: white;">
-                <h2 style="color: white;">RealRange™ Telematics Engine</h2>
+                <h2 style="color: white;">🔋 RealRange™ Telematics Engine</h2>
                 <p>AI-powered dynamic range calculation based on real-world conditions—not lab estimates.</p>
             </div>
 
@@ -373,11 +459,11 @@
         </div>
     </section>
 
-    <!-- SECTION 4: ANALYTICS DASHBOARD (Website 3 Continued) -->
+    <!-- SECTION 4: ANALYTICS DASHBOARD -->
     <section id="section-4" class="section-4">
         <div class="section-container">
             <div class="section-header">
-                <h2>Market & Performance Analytics</h2>
+                <h2>📈 Market & Performance Analytics</h2>
                 <p>Real-time insights on EV industry trends and SwadesiGo expansion metrics</p>
             </div>
 
@@ -535,7 +621,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 SwadesiGo. Demand Before Dealership. | <a href="https://github.com/riddhiman-nitr/swadesi-go-website" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a> | Series A Pitch</p>
+        <p>&copy; 2024 SwadesiGo. Demand Before Dealership. | <a href="https://github.com/riddhiman-nitr/swadesi-go-website" target="_blank">GitHub</a></p>
     </footer>
 
     <script src="script.js"></script>
