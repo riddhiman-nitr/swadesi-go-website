@@ -3,80 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwadesiGo Growth OS - Series A Strategy & Market Intelligence</title>
+    <title>SwadesiGo Growth OS</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav class="navbar">
-    <a href="index.html" class="logo">🚲 SwadesiGo</a>
+    <a onclick="showPage('home')" class="logo">🚲 SwadesiGo</a>
     <ul class="nav-links">
-        <li><a href="market.html">Market Intelligence</a></li>
-        <li><a href="gtm.html">Go-to-Market</a></li>
-        <li><a href="simulator.html">R2W Simulator</a></li>
-        <li><a href="financials.html">Financials</a></li>
+        <li><a onclick="showPage('market')">Market Intelligence</a></li>
+        <li><a onclick="showPage('gtm')">Go-to-Market</a></li>
+        <li><a onclick="showPage('simulator')">R2W Simulator</a></li>
+        <li><a onclick="showPage('financials')">Financials</a></li>
     </ul>
 </nav>
 
-<div class="container">
-    <div class="hero">
-        <h1>SwadesiGo Growth OS</h1>
-        <p>Series A Expansion Strategy — Smart, Sustainable, Self-Reliant Mobility for Tier-2/3 India</p>
-        <div class="hero-stats">
-            <div class="stat-card">
-                <div class="stat-number">₹15,000 Cr</div>
-                <div class="stat-label">EV Two-Wheeler Market (2024)</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">45%</div>
-                <div class="stat-label">YoY Market Growth</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">12M+</div>
-                <div class="stat-label">Gig Workers in India</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">3.2M</div>
-                <div class="stat-label">Target Opportunity (2-Yr TAM)</div>
+<div id="home" class="page active">
+    <div class="container">
+        <div class="hero">
+            <h1>SwadesiGo Growth OS</h1>
+            <p>Series A Expansion Strategy — Smart, Sustainable, Self-Reliant Mobility for Tier-2/3 India</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">₹15,000 Cr</div>
+                    <div class="stat-label">EV Two-Wheeler Market (2024)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45%</div>
+                    <div class="stat-label">YoY Market Growth</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12M+</div>
+                    <div class="stat-label">Gig Workers in India</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3.2M</div>
+                    <div class="stat-label">Target Opportunity (2-Yr TAM)</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="features-grid">
-        <a class="feature-card" href="market.html">
-            <h3>📊 Market Intelligence</h3>
-            <p>₹15K Cr market opportunity with 45% CAGR. Deep dive into segments, adoption trends, and competitive landscape.</p>
-            <button class="feature-btn">Explore Market →</button>
-        </a>
-        <a class="feature-card" href="gtm.html">
-            <h3>🎯 Go-to-Market Strategy</h3>
-            <p>100 Champions model across 3 waves. Capital-efficient distribution powered by community trust and local insights.</p>
-            <button class="feature-btn">View GTM Strategy →</button>
-        </a>
-        <a class="feature-card" href="simulator.html">
-            <h3>🔍 R2W City Simulator</h3>
-            <p>Interactive city ranking based on market potential, customer fit, and competitive whitespace. Adjust weights in real-time.</p>
-            <button class="feature-btn">Launch Simulator →</button>
-        </a>
-        <a class="feature-card" href="financials.html">
-            <h3>💰 Financial Projections</h3>
-            <p>Revenue ramp from ₹50 Cr (Y1) to ₹500+ Cr (Y3). Unit economics with improving margins and capital efficiency.</p>
-            <button class="feature-btn">View Financials →</button>
-        </a>
-    </div>
+        <div class="features-grid">
+            <div class="feature-card" onclick="showPage('market')">
+                <h3>📊 Market Intelligence</h3>
+                <p>₹15K Cr market opportunity with 45% CAGR. Deep dive into segments, adoption trends, and competitive landscape.</p>
+                <button class="feature-btn">Explore Market →</button>
+            </div>
+            <div class="feature-card" onclick="showPage('gtm')">
+                <h3>🎯 Go-to-Market Strategy</h3>
+                <p>100 Champions model across 3 waves. Capital-efficient distribution powered by community trust and local insights.</p>
+                <button class="feature-btn">View GTM Strategy →</button>
+            </div>
+            <div class="feature-card" onclick="showPage('simulator')">
+                <h3>🔍 R2W City Simulator</h3>
+                <p>Interactive city ranking based on market potential, customer fit, and competitive whitespace. Adjust weights in real-time.</p>
+                <button class="feature-btn">Launch Simulator →</button>
+            </div>
+            <div class="feature-card" onclick="showPage('financials')">
+                <h3>💰 Financial Projections</h3>
+                <p>Revenue ramp from ₹50 Cr (Y1) to ₹500+ Cr (Y3). Unit economics with improving margins and capital efficiency.</p>
+                <button class="feature-btn">View Financials →</button>
+            </div>
+        </div>
 
-    <section class="section" style="text-align: center; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;">
-        <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Ready to Scale Smart Mobility in Tier-2/3 India?</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">SwadesiGo is raising Series A to expand our community-driven distribution model across 14 cities in the next 24 months.</p>
-        <button style="background: white; color: #10b981; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s;">📧 Get In Touch</button>
-    </section>
+        <section class="section callout-section">
+            <h2>Ready to Scale Smart Mobility in Tier-2/3 India?</h2>
+            <p>SwadesiGo is raising Series A to expand our community-driven distribution model across 14 cities in the next 24 months.</p>
+            <button class="cta-button">📧 Get In Touch</button>
+        </section>
+    </div>
+</div>
+
+<div id="market" class="page">
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Market Intelligence & Opportunity Sizing</h2>
+            <p class="section-subtitle">India's EV two-wheeler market is experiencing explosive growth driven by government incentives, rising fuel costs, and changing consumer preferences.</p>
+
+            <div class="market-grid">
+                <div class="market-card">
+                    <h3>India EV Two-Wheeler Market (2024)</h3>
+                    <div class="number">₹15,000 Cr</div>
+                    <p>Market size growing at 45% CAGR. Industry shipped 6.8M units in FY2024, representing 18% of total two-wheeler sales.</p>
+                </div>
+                <div class="market-card">
+                    <h3>PLI Scheme Impact</h3>
+                    <div class="number">₹10,000 Cr</div>
+                    <p>Government incentives via PLI Scheme driving manufacturing capacity and reducing consumer prices by 15-20%.</p>
+                </div>
+                <div class="market-card">
+                    <h3>Gig Economy Workforce</h3>
+                    <div class="number">12M+</div>
+                    <p>Delivery partners, ride-hailing drivers, and SME owners represent high-value customer segment with operational cost pressures.</p>
+                </div>
+                <div class="market-card">
+                    <h3>Tier-2/3 Penetration</h3>
+                    <div class="number">28%</div>
+                    <p>EV adoption in Tier-2/3 cities is 10-15 points below Tier-1, representing greenfield expansion opportunity.</p>
+                </div>
+                <div class="market-card">
+                    <h3>Cost Savings for Users</h3>
+                    <div class="number">70%</div>
+                    <p>EV scooters reduce per-km operating cost vs. petrol two-wheelers. Payback period: 18-24 months for gig workers.</p>
+                </div>
+                <div class="market-card">
+                    <h3>5-Year Revenue TAM</h3>
+                    <div class="number">₹48,000 Cr</div>
+                    <p>Projected market size by 2028, with Tier-2/3 representing 35% of total addressable opportunity.</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div class="chart-title">EV Two-Wheeler Market Growth (FY2020-FY2028E)</div>
+                    <canvas id="marketGrowthChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Market Share by Segment (FY2024)</div>
+                    <canvas id="segmentChart"></canvas>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div class="chart-title">EV Adoption % by City Tier</div>
+                    <canvas id="adoptionChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Target Segment Addressable Market</div>
+                    <canvas id="tamChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="gtm" class="page">
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Go-to-Market Strategy: The SwadesiGo Circle</h2>
+            <p class="section-subtitle">A capital-efficient, demand-first expansion model powered by 100 hyper-local champions per city, zero physical retail, and community-driven product validation.</p>
+
+            <div class="gtm-phases">
+                <div class="phase-card">
+                    <span class="phase-badge">Wave 1 — Prove & Optimize</span>
+                    <h3>Months 0-12</h3>
+                    <ul>
+                        <li>Launch in 5 cities: Pune, Jaipur, Indore, Lucknow, Bhubaneswar</li>
+                        <li>Recruit 100 Champions per city (500 total)</li>
+                        <li>Validate product-market fit with gig workers and students</li>
+                        <li>Achieve ₹50 Cr annualized run-rate revenue</li>
+                        <li>Target: 8,000 units sold</li>
+                    </ul>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-badge">Wave 2 — Scale & Network</span>
+                    <h3>Months 13-24</h3>
+                    <ul>
+                        <li>Expand to 9 Tier-2 cities: Ahmedabad, Coimbatore, Kochi, Hyderabad, Bengaluru, Nagpur, Vadodara, Chandigarh, Surat</li>
+                        <li>Scale to 1,400 Champions across 14 cities</li>
+                        <li>Introduce basic retail micro-hubs in high-demand areas</li>
+                        <li>Target: 28,000 cumulative units, ₹180 Cr ARR</li>
+                    </ul>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-badge">Wave 3 — Consolidate & Monetize</span>
+                    <h3>Year 3+</h3>
+                    <ul>
+                        <li>Expand to 25+ cities nationwide</li>
+                        <li>Transition Champions into formal dealer network</li>
+                        <li>Launch connected services (battery-as-a-service, insurance)</li>
+                        <li>Target: ₹500+ Cr revenue, 80,000+ cumulative units</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="community-model">
+                <h3 class="model-title">The "100 Champions" Community Distribution Model</h3>
+                <div class="model-grid">
+                    <div class="model-step">
+                        <div class="step-number">1</div>
+                        <h4>Identify & Recruit</h4>
+                        <p>Target 100 hyper-local early adopters per city: delivery riders, college influencers, SME owners.</p>
+                    </div>
+                    <div class="model-step">
+                        <div class="step-number">2</div>
+                        <h4>Enable & Equip</h4>
+                        <p>Provide Champions with demo units, sales training, and 15-20% commission structure.</p>
+                    </div>
+                    <div class="model-step">
+                        <div class="step-number">3</div>
+                        <h4>Engage & Validate</h4>
+                        <p>Champions offer test rides, generate community trust, and provide real-world usage data.</p>
+                    </div>
+                    <div class="model-step">
+                        <div class="step-number">4</div>
+                        <h4>Scale & Systemize</h4>
+                        <p>Proven Champions transition to formal dealer roles as volume grows and retail micro-hubs open.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="positioning-title">Competitive Positioning</h3>
+            <div class="positioning-grid">
+                <div class="position-card">
+                    <h3>🚀 Ola Electric / Ather</h3>
+                    <ul>
+                        <li><strong>Strength:</strong> Tier-1 urban penetration, tech-first branding</li>
+                        <li><strong>Weakness:</strong> High CAC, premium pricing, limited Tier-2/3 presence</li>
+                        <li><strong>SwadesiGo Edge:</strong> Community distribution, affordability, durability for Indian roads</li>
+                    </ul>
+                </div>
+                <div class="position-card">
+                    <h3>🏭 TVS / Bajaj Legacy</h3>
+                    <ul>
+                        <li><strong>Strength:</strong> Established dealership networks, after-sales</li>
+                        <li><strong>Weakness:</strong> Slow innovation, perceived as "old tech"</li>
+                        <li><strong>SwadesiGo Edge:</strong> Modern product, digital-first experience, data-driven optimization</li>
+                    </ul>
+                </div>
+                <div class="position-card">
+                    <h3>✨ SwadesiGo Differentiation</h3>
+                    <ul>
+                        <li><strong>Capital Efficiency:</strong> Zero retail footprint initially; 3x faster unit economics vs. incumbents</li>
+                        <li><strong>Product Focus:</strong> Engineered for challenging Indian roads, practical durability over feature bloat</li>
+                        <li><strong>Ecosystem Play:</strong> Community + Services + Data = LTV 3x higher than competitors</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="simulator" class="page">
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Right-to-Win (R2W) City Selection Simulator</h2>
+            <p class="section-subtitle">Adjust strategic weights below to dynamically rank Wave 1 cities based on market viability, customer fit, and competitive whitespace.</p>
+
+            <div class="simulator-container">
+                <div class="controls">
+                    <h3 class="simulator-heading">Strategy Weights</h3>
+
+                    <div class="control-group">
+                        <div class="control-label">
+                            <span>Market Potential (EV adoption, market size)</span>
+                            <span class="control-value"><span id="val-market">35</span>%</span>
+                        </div>
+                        <input type="range" id="w-market" min="0" max="100" value="35" oninput="updateDashboard()">
+                    </div>
+
+                    <div class="control-group">
+                        <div class="control-label">
+                            <span>Customer Fit (Gig/SME density)</span>
+                            <span class="control-value"><span id="val-fit">40</span>%</span>
+                        </div>
+                        <input type="range" id="w-fit" min="0" max="100" value="40" oninput="updateDashboard()">
+                    </div>
+
+                    <div class="control-group">
+                        <div class="control-label">
+                            <span>Competitive Whitespace</span>
+                            <span class="control-value"><span id="val-comp">25</span>%</span>
+                        </div>
+                        <input type="range" id="w-comp" min="0" max="100" value="25" oninput="updateDashboard()">
+                    </div>
+                </div>
+
+                <div class="results" id="city-list"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="financials" class="page">
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Financial Projections & Unit Economics</h2>
+            <p class="section-subtitle">Conservative revenue ramp based on Wave 1-3 expansion, with improving unit economics as manufacturing scale and community distribution matures.</p>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div class="chart-title">Revenue Projection (FY2025-FY2027)</div>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Unit Economics Improvement</div>
+                    <canvas id="unitEconomicsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="market-grid" style="margin-top: 2rem;">
+                <div class="market-card">
+                    <h3>Average Selling Price (ASP)</h3>
+                    <div class="number">₹75,000</div>
+                    <p>Initial price point targeting gig workers and value-conscious segments. ASP to increase to ₹85K by Year 3 as premium variants launch.</p>
+                </div>
+                <div class="market-card">
+                    <h3>Gross Margin (Year 1)</h3>
+                    <div class="number">28%</div>
+                    <p>Conservative estimate including COGS, delivery, and champion commissions. Expected to expand to 38% by Year 3 with manufacturing scale.</p>
+                </div>
+                <div class="market-card">
+                    <h3>CAC (Community Model)</h3>
+                    <div class="number">₹2,500</div>
+                    <p>Champion-driven acquisition cost 70% lower than digital marketing. Payback period: 6-8 months. Industry avg (traditional): ₹8,000+</p>
+                </div>
+                <div class="market-card">
+                    <h3>LTV (Lifetime Value)</h3>
+                    <div class="number">₹2.8L</div>
+                    <p>Includes vehicle sales, maintenance, battery replacement, and connected services over 5-year customer lifecycle.</p>
+                </div>
+                <div class="market-card">
+                    <h3>Capital Efficiency</h3>
+                    <div class="number">3:1</div>
+                    <p>Revenue to Series A capital ratio by end of Year 2. Breakeven operational EBITDA achieved by Month 28.</p>
+                </div>
+                <div class="market-card">
+                    <h3>Series A Raise Target</h3>
+                    <div class="number">₹50-75 Cr</div>
+                    <p>Use of funds: 40% manufacturing capacity, 30% go-to-market expansion, 20% R&D, 10% working capital.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
 
 <footer>
     <p>&copy; 2025 SwadesiGo. Engineered for Indian Roads. Crafted for Real Impact.</p>
-    <p style="margin-top: 1rem; font-size: 0.9rem;">Data sources: Industry reports, Government of India Ministry of Heavy Industries, SIAM, Statista, news reports (2024)</p>
+    <p class="footer-note">Data sources: Industry reports, Government of India Ministry of Heavy Industries, SIAM, Statista, news reports (2024)</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
