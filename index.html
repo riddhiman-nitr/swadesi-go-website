@@ -8,7 +8,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #f8fafc;
             color: #0f172a;
             line-height: 1.6;
@@ -19,108 +19,114 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 20;
         }
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
             color: #10b981;
             cursor: pointer;
         }
-        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
         .nav-links a {
             color: #0f172a;
             text-decoration: none;
             font-weight: 600;
             cursor: pointer;
+            font-size: 0.95rem;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .nav-links a:hover { color: #10b981; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
         .page { display: none; }
         .page.active { display: block; }
         .hero {
-            background: linear-gradient(135deg, #10b981, #059669);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            padding: 4rem 2rem;
-            border-radius: 16px;
+            padding: 3.5rem 2rem;
+            border-radius: 14px;
             text-align: center;
             margin-bottom: 2rem;
         }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 0.8rem; }
-        .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.9); }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1rem; color: rgba(255,255,255,0.95); }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.4rem;
-            margin: 1.5rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
         }
         .card {
             background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 5px solid #10b981;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            padding: 1.3rem;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         }
-        .card h3 { margin-bottom: 0.6rem; }
-        .card p { color: #64748b; }
-        .num { font-size: 2rem; font-weight: 800; color: #10b981; margin: .5rem 0; }
+        .card h3 { margin-bottom: 0.5rem; font-size: 1rem; }
+        .card p { color: #64748b; font-size: 0.9rem; }
+        .num { font-size: 1.8rem; font-weight: 800; color: #10b981; margin: 0.4rem 0; }
         .btn {
             background: #10b981;
             color: white;
             border: none;
-            padding: .75rem 1rem;
-            border-radius: 8px;
-            font-weight: 700;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
             cursor: pointer;
-            margin-top: .8rem;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
         }
+        .btn:hover { background: #059669; }
         .section {
             background: white;
-            border-radius: 12px;
-            padding: 2rem;
+            border-radius: 10px;
+            padding: 1.5rem;
             margin: 1.5rem 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         }
-        .section h2 { margin-bottom: .8rem; }
-        .section p, .section li { color: #475569; }
+        .section h2 { margin-bottom: 0.6rem; font-size: 1.5rem; }
+        .section p { color: #475569; margin-bottom: 0.8rem; }
+        .section ul { margin-left: 1.5rem; color: #475569; }
+        .section li { margin-bottom: 0.4rem; }
         .chart-box {
             background: white;
-            border-radius: 12px;
+            border-radius: 10px;
             padding: 1rem;
-            height: 320px;
+            height: 300px;
             margin: 1.5rem 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         }
         .control-group { margin: 1rem 0; }
         .control-label {
             display: flex;
             justify-content: space-between;
-            margin-bottom: .5rem;
-            font-weight: 700;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
         .control-value {
             background: #10b981;
             color: white;
             border-radius: 999px;
-            padding: 0.2rem 0.7rem;
-            font-size: 0.8rem;
+            padding: 0.15rem 0.6rem;
+            font-size: 0.75rem;
         }
         input[type="range"] { width: 100%; accent-color: #10b981; }
         .city-card {
             background: white;
-            border-left: 5px solid #10b981;
-            padding: 1rem 1.2rem;
-            border-radius: 10px;
+            border-left: 4px solid #10b981;
+            padding: 0.9rem 1rem;
+            border-radius: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0.8rem 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin: 0.6rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
         }
         .city-score {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: #10b981;
         }
@@ -130,6 +136,7 @@
             text-align: center;
             padding: 1.5rem;
             margin-top: 2rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -148,29 +155,28 @@
         <div class="container">
             <div class="hero">
                 <h1>SwadesiGo Growth OS</h1>
-                <p>Demand before dealership. Smart mobility for Tier-2 and Tier-3 India.</p>
+                <p>Demand before dealership. Smart mobility for Tier-2 & Tier-3 India.</p>
             </div>
-
             <div class="grid">
                 <div class="card" onclick="showPage('market')" style="cursor:pointer;">
                     <h3>📊 Market Intelligence</h3>
-                    <p>₹15K Cr market opportunity with strong EV momentum.</p>
-                    <button class="btn">Open</button>
+                    <p>₹15K Cr opportunity, 45% CAGR, gig economy focus.</p>
+                    <button class="btn">Explore</button>
                 </div>
                 <div class="card" onclick="showPage('gtm')" style="cursor:pointer;">
                     <h3>🎯 Go-to-Market</h3>
-                    <p>100 Champions, scalable community-driven demand model.</p>
-                    <button class="btn">Open</button>
+                    <p>100 Champions, 3-wave expansion strategy.</p>
+                    <button class="btn">Explore</button>
                 </div>
                 <div class="card" onclick="showPage('simulator')" style="cursor:pointer;">
                     <h3>🔍 R2W Simulator</h3>
-                    <p>Rank cities using market potential and customer fit.</p>
-                    <button class="btn">Open</button>
+                    <p>Interactive city ranking tool.</p>
+                    <button class="btn">Explore</button>
                 </div>
                 <div class="card" onclick="showPage('financials')" style="cursor:pointer;">
                     <h3>💰 Financials</h3>
-                    <p>View unit economics and revenue growth pathway.</p>
-                    <button class="btn">Open</button>
+                    <p>Revenue ramp, unit economics, margin expansion.</p>
+                    <button class="btn">Explore</button>
                 </div>
             </div>
         </div>
@@ -180,27 +186,23 @@
         <div class="container">
             <div class="section">
                 <h2>Market Intelligence</h2>
-                <p>India's EV two-wheeler market is growing rapidly due to government support, fuel costs, and rural/urban demand shifts.</p>
+                <p>India's EV two-wheeler market is rapidly growing driven by government incentives, rising fuel costs, and strong gig economy demand.</p>
                 <div class="grid">
                     <div class="card">
                         <h3>Market Size</h3>
                         <div class="num">₹15,000 Cr</div>
-                        <p>FY2024 EV two-wheeler market size.</p>
                     </div>
                     <div class="card">
-                        <h3>CAGR</h3>
+                        <h3>Growth Rate</h3>
                         <div class="num">45%</div>
-                        <p>Strong long-term market momentum.</p>
                     </div>
                     <div class="card">
-                        <h3>Gig Economy</h3>
+                        <h3>Gig Workforce</h3>
                         <div class="num">12M+</div>
-                        <p>Delivery workers and SME operators form a core customer base.</p>
                     </div>
                     <div class="card">
-                        <h3>Tier-2/3</h3>
+                        <h3>Tier-2/3 Penetration</h3>
                         <div class="num">28%</div>
-                        <p>Low penetration creates a large expansion window.</p>
                     </div>
                 </div>
             </div>
@@ -213,19 +215,16 @@
         <div class="container">
             <div class="section">
                 <h2>Go-to-Market Strategy</h2>
-                <p>SwadesiGo builds demand before dealership using a community-led 100 Champions model.</p>
-                <ul style="margin-left: 1.5rem; color: #475569;">
-                    <li>Recruit 100 Champions per city</li>
-                    <li>Generate authentic local test rides</li>
-                    <li>Use community trust to reduce CAC</li>
-                    <li>Expand to 25+ cities over time</li>
+                <p>SwadesiGo builds demand before dealership using a hyper-local 100 Champions model.</p>
+                <ul>
+                    <li><strong>Wave 1:</strong> Launch in 5 cities (Pune, Jaipur, Indore, Lucknow, Bhubaneswar)</li>
+                    <li><strong>Wave 2:</strong> Expand to 9 more Tier-2 cities</li>
+                    <li><strong>Wave 3:</strong> Consolidate, launch services, reach 25+ cities</li>
                 </ul>
             </div>
             <div class="section">
-                <h2>Wave Plan</h2>
-                <p><strong>Wave 1:</strong> Launch in 5 cities and prove repeatable demand.</p>
-                <p><strong>Wave 2:</strong> Scale to 9 more cities with stronger micro-hubs.</p>
-                <p><strong>Wave 3:</strong> Consolidate, monetize, and build partner services.</p>
+                <h2>Champions Model</h2>
+                <p>100 trusted local champions per city generate authentic demand through test rides, referrals, and community engagement. This reduces CAC by 70% vs digital marketing.</p>
             </div>
         </div>
     </div>
@@ -234,7 +233,7 @@
         <div class="container">
             <div class="section">
                 <h2>R2W City Selection Simulator</h2>
-                <p>Adjust weights to compare city opportunities.</p>
+                <p>Adjust weights below to dynamically rank Wave 1 cities based on your strategic priorities.</p>
 
                 <div class="control-group">
                     <div class="control-label">
@@ -246,7 +245,7 @@
 
                 <div class="control-group">
                     <div class="control-label">
-                        <span>Customer Fit</span>
+                        <span>Customer Fit (Gig/SME)</span>
                         <span class="control-value"><span id="val-fit">40</span>%</span>
                     </div>
                     <input type="range" id="w-fit" min="0" max="100" value="40" oninput="updateSimulator()">
@@ -254,13 +253,13 @@
 
                 <div class="control-group">
                     <div class="control-label">
-                        <span>Whitespace</span>
+                        <span>Competitive Whitespace</span>
                         <span class="control-value"><span id="val-comp">25</span>%</span>
                     </div>
                     <input type="range" id="w-comp" min="0" max="100" value="25" oninput="updateSimulator()">
                 </div>
 
-                <div id="city-results"></div>
+                <div id="city-results" style="margin-top: 1rem;"></div>
             </div>
         </div>
     </div>
@@ -269,28 +268,28 @@
         <div class="container">
             <div class="section">
                 <h2>Financial Projections</h2>
-                <p>Conservative revenue ramp with improving margins over time.</p>
+                <p>Conservative revenue ramp with improving margins through scale.</p>
                 <div class="chart-box"><canvas id="revenueChart"></canvas></div>
-                <div class="grid" style="margin-top:1.5rem;">
+                <div class="grid" style="margin-top: 1.5rem;">
                     <div class="card">
                         <h3>ASP</h3>
-                        <div class="num">₹75,000</div>
-                        <p>Starter price point for value-conscious riders.</p>
+                        <div class="num">₹75K</div>
+                        <p>Entry-level EV pricing</p>
                     </div>
                     <div class="card">
-                        <h3>Gross Margin</h3>
+                        <h3>Gross Margin Y1</h3>
                         <div class="num">28%</div>
-                        <p>Improves as production and operations scale.</p>
+                        <p>Improves to 38% by Y3</p>
                     </div>
                     <div class="card">
                         <h3>CAC</h3>
-                        <div class="num">��2,500</div>
-                        <p>Low community-driven acquisition cost.</p>
+                        <div class="num">₹2.5K</div>
+                        <p>Low community cost</p>
                     </div>
                     <div class="card">
                         <h3>LTV</h3>
                         <div class="num">₹2.8L</div>
-                        <p>Strong repeat revenue from services and upgrades.</p>
+                        <p>5-year lifetime value</p>
                     </div>
                 </div>
             </div>
@@ -298,7 +297,7 @@
     </div>
 
     <footer>
-        <p>© 2025 SwadesiGo. Built for real Indian mobility.</p>
+        <p>© 2025 SwadesiGo. Built for Indian roads.</p>
     </footer>
 
     <script>
@@ -333,9 +332,9 @@
                 }))
                 .sort((a, b) => b.score - a.score);
 
-            document.getElementById('city-results').innerHTML = scores.map((item, index) => `
+            document.getElementById('city-results').innerHTML = scores.map((item, idx) => `
                 <div class="city-card">
-                    <div><strong>#${index + 1} ${item.city}</strong></div>
+                    <div><strong>#${idx + 1} ${item.city}</strong></div>
                     <div class="city-score">${item.score}</div>
                 </div>
             `).join('');
@@ -347,13 +346,15 @@
                 data: {
                     labels: ['FY20','FY21','FY22','FY23','FY24','FY25E','FY26E','FY27E','FY28E'],
                     datasets: [{
-                        label: 'Market size',
+                        label: 'Market Size (₹ Cr)',
                         data: [800,1200,2100,4500,8200,12500,18000,25000,33500],
                         borderColor: '#10b981',
-                        backgroundColor: 'rgba(16,185,129,0.12)',
+                        backgroundColor: 'rgba(16,185,129,0.1)',
                         fill: true,
                         tension: 0.4,
-                        borderWidth: 2
+                        borderWidth: 2,
+                        pointBackgroundColor: '#10b981',
+                        pointRadius: 3
                     }]
                 },
                 options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
@@ -362,10 +363,11 @@
             new Chart(document.getElementById('segmentChart'), {
                 type: 'doughnut',
                 data: {
-                    labels: ['Commuters','Delivery','Students','Other'],
+                    labels: ['Commuters','Delivery','Students','Others'],
                     datasets: [{
                         data: [35,32,22,11],
-                        backgroundColor: ['#10b981','#059669','#34d399','#d1fae5']
+                        backgroundColor: ['#10b981','#059669','#34d399','#d1fae5'],
+                        borderWidth: 0
                     }]
                 },
                 options: { responsive: true, maintainAspectRatio: false }
@@ -376,13 +378,15 @@
                 data: {
                     labels: ['M1','M3','M6','M9','M12','M18','M24'],
                     datasets: [{
-                        label: 'Revenue',
+                        label: 'Revenue (₹ Cr)',
                         data: [2,5,12,25,50,125,180],
                         borderColor: '#10b981',
-                        backgroundColor: 'rgba(16,185,129,0.12)',
+                        backgroundColor: 'rgba(16,185,129,0.1)',
                         fill: true,
                         tension: 0.4,
-                        borderWidth: 2
+                        borderWidth: 2,
+                        pointBackgroundColor: '#10b981',
+                        pointRadius: 3
                     }]
                 },
                 options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
