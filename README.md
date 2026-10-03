@@ -1,83 +1,127 @@
 # SwadesiGo — Demand Before Dealership
 
-SwadesiGo is a strategic growth and market-entry concept designed to help EV manufacturers expand into new markets by **validating demand before committing to physical dealership infrastructure**.
+> A strategic growth and market-entry concept designed to help EV manufacturers validate demand before committing to physical dealership infrastructure.
 
-The project combines demand generation, market validation, customer acquisition, and data-driven expansion into a unified growth framework.
+🌐 **[Live Website](https://riddhiman-nitr.github.io/swadesi-go-website/)**
 
-## 🚀 Core Concept
+---
 
-**Demand Before Dealership**
+## 🚀 Overview
 
-Instead of opening dealerships first and hoping customers follow, SwadesiGo focuses on building and validating local demand before committing significant capital to physical expansion.
+**SwadesiGo** is a strategic growth framework focused on a simple principle:
 
-The strategy is built around three key components:
+### **Demand Before Dealership**
 
-### 🏆 100 Champions Program
+Instead of establishing physical dealerships first and waiting for customers to arrive, SwadesiGo focuses on **building, measuring, and validating local demand before making large infrastructure investments**.
 
-A community-led market validation and acquisition engine designed to identify and activate the first 100 customers/champions in a new market.
+The strategy combines community-led customer acquisition, real-world EV data, market validation, and data-driven expansion into a unified growth system.
 
-The program helps:
+---
 
-* Generate early demand
-* Build local communities
-* Create referral-driven acquisition
+## 🏆 100 Champions Program
+
+The **100 Champions Program** is designed to identify and activate the first group of customers and EV advocates in a new market.
+
+These early adopters act as local demand generators and help create a foundation for scalable expansion.
+
+### Key objectives
+
+* Generate early customer demand
+* Build local EV communities
+* Encourage referral-driven acquisition
 * Validate market potential
-* Establish an initial customer base before dealership expansion
+* Create local brand advocates
+* Generate insights before dealership expansion
 
-### 📡 RealRange Telematics
+---
 
-A data-driven approach focused on real-world EV usage and range intelligence.
+## 📡 RealRange Telematics
 
-It is designed to help understand:
+**RealRange Telematics** focuses on understanding how EVs perform in real-world usage rather than relying solely on standardized testing conditions.
+
+The framework can provide insights into:
 
 * Real-world driving patterns
-* Range requirements
 * Customer usage behaviour
-* Charging-related requirements
+* Range requirements
+* Charging requirements
+* Route and usage patterns
 * Market-specific EV adoption insights
 
-### 📊 Growth OS
+These insights can help inform future product positioning and market expansion decisions.
 
-A centralized growth framework combining market intelligence, demand generation, customer acquisition, and expansion metrics.
+---
 
-The interactive dashboard provides a visual representation of the proposed growth strategy and its key metrics.
+## 📊 Growth OS
 
-## 🖥️ Website
+**Growth OS** acts as the strategic layer connecting market intelligence, customer acquisition, community building, and expansion metrics.
 
-The project is implemented as a responsive interactive web experience that presents the SwadesiGo strategy through:
+It is designed to help monitor:
 
-* Interactive dashboards
-* Growth metrics
-* Market expansion framework
-* 100 Champions Program
-* RealRange Telematics
-* Customer acquisition strategy
-* Market validation framework
-* Two-year growth strategy
+* Demand generation
+* Customer acquisition
+* Community growth
+* Market validation
+* Conversion metrics
+* Expansion readiness
+
+The website provides an interactive visualization of this growth framework.
+
+---
+
+## 🖥️ Website Features
+
+The interactive website presents the SwadesiGo strategy through:
+
+* 📈 Growth metrics
+* 🏆 100 Champions Program
+* 📡 RealRange Telematics
+* 📊 Growth OS
+* 🌍 Market expansion framework
+* 👥 Customer acquisition strategy
+* 🔎 Market validation framework
+* 🚀 Two-year growth strategy
+* 📱 Responsive web design
+
+---
 
 ## 🛠️ Tech Stack
 
-* **HTML5** — Website structure and content
-* **CSS3** — Responsive styling, layouts and visual design
-* **JavaScript** — Interactions, animations and dynamic behaviour
-* **GitHub Pages** — Static website deployment
+| Technology       | Purpose                                |
+| ---------------- | -------------------------------------- |
+| **HTML5**        | Website structure and content          |
+| **CSS3**         | Styling, layouts and responsive design |
+| **JavaScript**   | Interactions and dynamic functionality |
+| **GitHub Pages** | Website deployment                     |
+
+---
 
 ## 📁 Project Structure
 
 ```text
 swadesi-go-website/
 │
-├── index.html      # Main website
-├── styles.css      # Styling and responsive design
-├── script.js       # Interactions and dynamic functionality
-└── README.md       # Project documentation
+├── index.html       # Main website
+├── styles.css       # Website styling
+├── script.js        # Interactive functionality
+└── README.md        # Project documentation
 ```
 
-## 🌐 Deployment
+---
 
-This is a static website and can be deployed directly using **GitHub Pages**.
+## 🌐 Live Deployment
 
-### Run Locally
+The website is deployed using **GitHub Pages**.
+
+### 🔗 Live Website
+
+**https://riddhiman-nitr.github.io/swadesi-go-website/**
+
+The website is hosted remotely through GitHub Pages, so the site remains accessible even when the developer's local computer is offline.
+
+---
+
+## 💻 Run Locally
 
 Clone the repository:
 
@@ -85,19 +129,29 @@ Clone the repository:
 git clone https://github.com/riddhiman-nitr/swadesi-go-website.git
 ```
 
-Navigate to the project:
+Navigate to the project directory:
 
 ```bash
 cd swadesi-go-website
 ```
 
-Then open `index.html` in your browser.
+Open `index.html` in a browser.
+
+No additional dependencies or build process are required.
+
+---
 
 ## 🎯 Objective
 
-The objective of SwadesiGo is to demonstrate a scalable approach to EV market expansion where **customer demand, market intelligence, and data precede physical infrastructure investment**.
+The objective of SwadesiGo is to demonstrate a scalable approach to EV market expansion where:
 
-The framework aims to reduce expansion uncertainty while creating a repeatable playbook for entering and scaling across new markets.
+> **Customer demand → Market validation → Data → Infrastructure**
+
+rather than investing heavily in physical infrastructure before validating the market.
+
+The framework aims to reduce expansion uncertainty and create a repeatable playbook for entering and scaling across new markets.
+
+---
 
 ## 📌 Project Status
 
@@ -107,4 +161,18 @@ This repository contains the interactive website and visualization of the propos
 
 ---
 
-Built as an interactive strategic growth concept for **SwadesiGo**.
+## 👤 Project
+
+Developed as an interactive strategic growth and market-entry concept for **SwadesiGo**.
+
+### 🔗 Repository
+
+**[GitHub Repository](https://github.com/riddhiman-nitr/swadesi-go-website)**
+
+### 🌐 Live Demo
+
+**[SwadesiGo Website](https://riddhiman-nitr.github.io/swadesi-go-website/)**
+
+---
+
+© 2026 SwadesiGo. All rights reserved.
